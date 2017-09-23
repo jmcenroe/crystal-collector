@@ -4,6 +4,10 @@
     -webkit-box-sizing: border-box;
 }
 
+.container {
+	margin-bottom: 10px;
+}
+
 div {
 	margin-left: 10px;
 	margin-top: 10px;
@@ -26,24 +30,41 @@ h1 {
     padding: 25px 5px;
 	background-color: #ff0000;
 	color: #fff; 
+	line-height: 1.3;
 }
 
 .random {
 	height: 100px;
-	width: 50px;
+	width: 175px;
+	margin-left: 0;
 	background-color: #3e0ce8;
 	color: #fff;
 	padding-top: 10px;
+	font-size: 36px;
+}
+
+#randomNumber {
+	padding: 5px;
+}
+
+h2 {
+	padding: 20px 5px;
+	line-height: 2;
 }
 
 .scoreboard {
+	float: left;
 	height: 100px;
-	width: 225px;
+	width: 75px;
+	margin-left: 0;
 	background-color: #ffb31a;
+	color: #3e0ce8;
 }
 
 .crystals {
 	clear: both;
+	padding: 10px 0;
+	margin-left: 0;
 }
 
 img {
@@ -51,5 +72,23 @@ img {
 }
 
 #green, #pink, #yellow {
+	margin-left: 0;
 	padding-left: 5px;
+}
+
+p {
+	background-color: #4aaaa5;	
+	color: #fff;
+	width: 225px;
+	padding: 5px;
+}
+
+.userTotal {
+	height: 100px;
+	width: 225px;
+	background-color: #4aaaa5;
+	color: #fff;
+	font-size: 36px;
+	margin-left: 0;
+	padding: 5px;
 }
