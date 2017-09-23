@@ -4,6 +4,10 @@
     -webkit-box-sizing: border-box;
 }
 
+body {
+	background-image:url('../images/background.png');
+}
+
 .container {
 	margin-bottom: 10px;
 }
