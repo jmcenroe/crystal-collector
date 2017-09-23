@@ -1,27 +1,14 @@
 $(document).ready(function() {
 
            // Storing variables for later use in functions
-           var blue = Math.floor(Math.random() * 12) + 1
-           var green = Math.floor(Math.random() * 12) + 1
-           var pink = Math.floor(Math.random() * 12) + 1
-           var yellow = Math.floor(Math.random() * 12) + 1
+           var blue = Math.floor(Math.random() * 12) + 1;
+           var green = Math.floor(Math.random() * 12) + 1;
+           var pink = Math.floor(Math.random() * 12) + 1;
+           var yellow = Math.floor(Math.random() * 12) + 1;
            var userTotal = 0;
            var wins = 0;
            var losses = 0;
            var Random;
-
-           // Resets the game
-           function reset() {
-               Random
-               console.log(Random)
-               $('#randomNumber').html(Random);
-               blue;
-               green;
-               pink;
-               yellow;
-               userTotal = 0;
-               $('#finalTotal').html(userTotal);
-           }
 
            // Selects a random number 19 - 120 to be shown at the start of the game 
            var Random = Math.floor(Math.random() * 101) + 19
@@ -32,6 +19,19 @@ $(document).ready(function() {
            //  Decaring variables for scoreboard
            $('#numWins').html(wins);
            $('#numLosses').html(losses);
+           
+           // Resets the game
+           function reset() {
+               Random;
+               console.log(Random);
+               $('#randomNumber').html(Random);
+               blue;
+               green;
+               pink;
+               yellow;
+               userTotal = 0;
+               // $('#finalTotal').html(userTotal);
+           }
 
            // Adds the wins to the userTotal
            function huzzah() {
@@ -48,24 +48,30 @@ $(document).ready(function() {
                reset()
            }
 
+            //sets win/lose conditions
+           function endGame() {
+            if (userTotal === Random) {
+                   huzzah();
+               } else if (userTotal > Random) {
+                   loser();
+               }
+           }
+
            // Sets up click for jewels
            $('#blue').on('click', function() {
                userTotal = userTotal + blue;
                console.log("New userTotal= " + userTotal);
                $('#totalScore').html(userTotal);
-           })
+                
+                endGame();
+            })
 
            $('#green').on('click', function() {
                userTotal = userTotal + green;
                console.log("New userTotal= " + userTotal);
                $('#totalScore').html(userTotal);
 
-               //sets win/lose conditions
-               if (userTotal === Random) {
-                   huzzah();
-               } else if (userTotal > Random) {
-                   loser();
-               }
+               endGame();
            })
 
            $('#pink').on('click', function() {
@@ -73,11 +79,7 @@ $(document).ready(function() {
                console.log("New userTotal= " + userTotal);
                $('#totalScore').html(userTotal);
 
-               if (userTotal === Random) {
-                   huzzah();
-               } else if (userTotal > Random) {
-                   loser();
-               }
+               endGame();
            })
 
            $('#yellow').on('click', function() {
@@ -85,18 +87,7 @@ $(document).ready(function() {
                console.log("New userTotal= " + userTotal);
                $('#totalScore').html(userTotal);
 
-               if (userTotal === Random) {
-                   huzzah();
-               } else if (userTotal > Random) {
-                   loser();
-               }
-
-               //Sets win/lose conditions
-               if (userTotal === Random) {
-                   huzzah();
-               } else if (userTotal > Random) {
-                   loser();
-               }
+               endGame();
 
            });
        });
