@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
            // Storing variables for later use in functions
-           var blue = Math.floor(Math.random() * 12) + 1;
-           var green = Math.floor(Math.random() * 12) + 1;
-           var pink = Math.floor(Math.random() * 12) + 1;
-           var yellow = Math.floor(Math.random() * 12) + 1;
+           var blue = Math.floor(Math.random() * 11 + 1);
+           var green = Math.floor(Math.random() * 11 + 1);
+           var pink = Math.floor(Math.random() * 11 + 1);
+           var yellow = Math.floor(Math.random() * 11 + 1);
            var userTotal = 0;
            var wins = 0;
            var losses = 0;
            var Random;
 
            // Selects a random number 19 - 120 to be shown at the start of the game 
-           var Random = Math.floor(Math.random() * 101) + 19
+           var Random = Math.floor(Math.random() * 101 + 19)
 
            // Appending random number to the randomNumber id in the html doc
            $('#randomNumber').html(Random);
@@ -22,15 +22,15 @@ $(document).ready(function() {
            
            // Resets the game
            function reset() {
-               Random;
+               Random = Math.floor(Math.random() * 101 + 19);
                console.log(Random);
                $('#randomNumber').html(Random);
-               blue;
-               green;
-               pink;
-               yellow;
+               blue = Math.floor(Math.random() * 11 + 1);
+               green = Math.floor(Math.random() * 11 + 1);
+               pink = Math.floor(Math.random() * 11 + 1);
+               yellow = Math.floor(Math.random() * 11 + 1);
                userTotal = 0;
-               // $('#finalTotal').html(userTotal);
+               $('#totalScore').html(userTotal);
            }
 
            // Adds the wins to the userTotal
